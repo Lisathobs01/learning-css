@@ -1,0 +1,152 @@
+body{
+    
+     
+ border-style: dotted dashed solid double;
+
+   
+}
+
+/*Selectors*/
+
+*{
+    color: black;
+
+}
+
+.error{
+
+
+    color: red;
+}
+.submit{
+
+    color: green;
+}
+#test {
+
+    color  : maroon;
+}
+
+
+
+/*buttons*/
+button-1:hover{
+
+   
+   
+    color: blueviolet;
+    
+}
+.button-2{
+
+
+  
+    background-color:rgb(0, 174, 255);
+    position: static;
+}
+
+.button-3{
+
+    
+    background-color:rgb(0, 174, 255);
+    position:static;
+
+
+}
+
+
+/*Lists*/
+
+ul{
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*Class Box Model and properties*/
+
+.box-model{
+
+    border: 1px solid purple;
+    height: 50px;
+    width:300px;
+    padding: 20px; /*Padding adds space between the content and the border in all four directions*/
+    margin: 20px; /*Adds the space outside the border in all directions*/
+    border-radius: 15px;/*Border radius adds a curvature to the corners of the border*/
+}
+
+
+/*Cascade*/
+
+h2{
+
+    color :blue!important;
+}
+h2{
+
+    color:aqua;
+}
+
+/*INHERITANCE*/
+
+.inheritance{
+
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+
+/*STYLING TABLES*/
+
+th,td{
+
+    border:1px solid #ccc;
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/*css properties which affect the layout of the web page
+
+-The first property is the display property which specify if or how an element is displayed.
+- In every html element has a default value it can either be block  as in the case of a div tag or inline as in the case of a span tag
+for example.
+*/
+
+.content-1{
+    border : 1px solid rebeccapurple;
+    display: inline;
+
+    /*Display : none is used with javascript to show or hide elements*/
+}
+
+.content-2{
+    border : 1px solid palevioletred;
+    display: block;
+}
+
+
+/*POSITION PROPERTY WHICH SPECIFIES THE TYPE OF POSITIONING METHOD USED FOR AN ELEMENT....There are 5 different values
+1. static position
+2 relatie position
+3.fixed position
+4.absolue position
+5.sticky position
+
+*/
+
+.Position-1 {
+    border: 1px solid red;
+    position: static;
+    
+}
+
+.Position-2 {
+    border: 1px solid blue;
+    position: static;
+    
+}
