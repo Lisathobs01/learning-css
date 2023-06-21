@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SWMS - Dashboard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  
+    <!-- JQuery -->
+    <script type="text/javascript" src="/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/jquery/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/dashboard.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/csir-theme.css"/>
+
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/libraries/moment/moment.min.js"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="/jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/jquery/jquery-ui-1.13.1/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/dashboard.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/csir-theme.css"/>
+
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/libraries/moment/moment.min.js"></script>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+
+    <script type="text/javascript" src="/libraries/jquery-simple-datetimepicker/jquery.simple-dtpicker.js"></script>
+  
+
+<style>
+    canvas {
+      width: 100% !important;
+    }
+
+    .mfa-code {
+      padding-right: 2px !important;
+      margin: -50px 5px !important;
+      font-size: 15px !important;
+    }
+  </style>
+
+</head>
+<style>
+  .noNotifications {
+    text-align: center; 
+    margin-bottom:unset !important;
+  }
+</style>
+<body>
+  <!-- Side Nav -->
+  <div class="sidebar close">
+    <!-- logo area -->
+    <div class="logo-details">
+      <i class="bx bxl-c-plus-plus"></i>
+      <span class="logo_name"></span>
+    </div>
+
+    <!-- navigation area -->
+    <ul class="nav-links">
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/dashboard">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/dashboard">Dashboard</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/summary">
+            <i class="bx bx-table"></i>
+            <span class="link_name">Summary</span>
+          </a>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="/loggedin/summary">Summary</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/locations">
+            <i class='bx bxs-map'></i>
+            <span class="link_name">Locations</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/locations">Locations</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!----WATERENETWORK END_POINT --->
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/waternetwork">
+            <i class='bx bx-network-chart'></i>
+            <span class="link_name">Water Networks</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/waternetwork" >Water Networks</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!----RESERVOIRS END_POINT --->
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/reservoir">
+            <i class='bx bx-cylinder'></i>
+            <span class="link_name">Reservoirs</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/reservoir">Reservoirs</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/sensor">
+            <i class="bx bx-broadcast"></i>
+            <span class="link_name">Sensors</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/sensor">Sensors</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Control valve Notifications -->
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/pressurecontrolvalve">
+            <i class='bx bx-fingerprint'></i>
+            <span class="link_name">Pressure Control Valve</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/pressurecontrolvalve">Pressure Control Valve</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/meter/list">
+            <i class='bx bxs-thermometer'></i>
+            <span class="link_name">Meters</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/meter/list">Meters</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!----PIPES END_POINT --->
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/pipe">
+            <i class='bx bx-git-commit'></i>
+            <span class="link_name">Pipes</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/pipe" >Pipes</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="icon-link">
+          <a href="/loggedin/actuation">
+            <i class='bx bxs-chip'></i>
+            <span class="link_name">Actuation</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="/loggedin/actuation">Actuation</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Top Nav -->
+  <section>
+    <header class="">
+      <nav class="navbar shadow navbar-custom fixed-top navbar-expand-lg navbar-light bg-white pe-4 py-2">
+        <div class="container-fluid">
+          <div class="home-content">
+            <i class="bx bx-menu-alt-left"></i>
+          </div>
+          <a class="navbar-brand fw-bold text-uppercase text-base" href="/">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYxJREFUSEu1lesxBEEUhb+NABEgAmRABGSACBABGZABIkAESwZEgAyIgPqmurd6uvoxS+2t2tof033Ouec+esaKY7ZifJYhWAcOgSNgF9gK4r6AR+AeeM4FTyW4As4ASVpxB5ymB3oEKn1I1JbAP0MGr8AH4L9ZDdEi0Irbhuo34CQARjwFrQGSSlYl8KLgtdDv80CudfuhLvG838UoEqhi3lD+EgAluK4o0Ka9EoFFFFySWmyHmniuFYP9eQ3slsuONdH3nWUJVP/eacUL4Ab46YBb5GFO0gx6hfX8QQDu2fMUBnJE4DQ6qa3YCBdbHeZ9h82hGxHYt5sTfO3V6Tu1ObWo52tM2xZsFXihPs+gRzDFf6d71OJpBjWLTNmh0tOWjZ5zos1wESmBAMfJt7jEIrBLT4BaOLkj8Nwi+9b03ITpXhfUlVCb7qLyqCKfZIfNAkYyN2p8WErK3UvOz7A5S1Fa1702FEf7PDf0eitq74GqLaz2mJE2xAfFgfQ3KXov2iSQv2Twb+AI8As8Kk4Zz0tRFwAAAABJRU5ErkJggg=="/>
+            <span class="d-none d-sm-inline">Smart Water Management System</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-white" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              
+                <li class="nav-item">
+                  <a href="/loggedin/userprofile/editOwnProfile">
+                    <div class="profile-box">
+                      <div class="row">
+                        <div class="col-3">
+                          <div class="image-box">
+                            <i class='bx bx-user-circle'></i>
+                          </div>
+                        </div>
+                        <div class="col-9">
+                          <div class="profile-name">lngcama@csir.co.za</div>
+                          <div class="profile-name">Administrator</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="nav-item divider"></li>
+                <li class="nav-item dropdown dropstart">
+                  <a id="NotificationsDropDown" role="button" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class='bx bx-bell' style="font-size: 20px; margin: 12px;"></i>
+                    <span id="notificationsCount" style="margin: 10px -15px; font-size: 10px;" class="position-absolute translate-middle badge bg-danger rounded-circle">0</span>
+                  </a>
+                  <div class="dropdown-menu" id="notificationsDropdown" aria-labelledby="NotificationsDropDown" style="margin-top: 45px; margin-right: -40px;">
+                    <div id="notificationList">
+                      <p class='noNotifications'>No new notifications..</p>
+                    </div>
+                    <div id="viewList" style="text-align: center;"></div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropstart">
+                  <a id="settingsDropDown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class='bx bx-cog' style="font-size: 20px; margin: 12px;"></i>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="settingsDropDown" style="margin-top: 45px; margin-right: -40px;">
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/usergroup">User groups</a>
+                    </li>
+                    
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/userprofile/list">User profiles</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/systemproperty/list">System properties</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/systempreference">System preferences</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/mailconfiguration/list">Mail configurations</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/mapprovider">Map provider details</a>
+                    </li>
+                    
+                      <li><hr class="dropdown-divider"></li>
+                      <li>
+                        <a class="dropdown-item" href="/loggedin/datagenerator/generator">Data generator</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/loggedin/downlinkactivity/list">Downlink activity</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="/loggedin/externalsystem">External Systems</a>
+                      </li>
+                    
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <a class="dropdown-item" href="/logout">Logout</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item" style="margin: 8px 0 0 10px;">
+                  <a href="/logout" class="btn btn-outline-success">
+                    logout
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </section>
+
+  <main id="main-section" class="home-section pt-5">
+
+    <section>
+      <div class="page-header">
+        <h2 class="page-heading">Dashboard</h2>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="mt-3 mb-5 mt-lg-5">
+        <div class="row card-object meter-data">
+          <div class="card-header data-info-card-header text-center ">
+            <h5>Meter Data Request Form
+              <a href="#" id="Descriptions">
+                <i class='bx bx-info-circle info-icon' data-toggle="tooltip" data-placement="left" title="Click for more info."></i>
+              </a>
+            </h5>
+          </div>
+
+          <div class="card-body">
+            <form id="QueryBuildingDataForm">
+              <div class="row">
+                <div class='col-md-4'>
+                  <div class="form-floating mb-3">
+                    <select class="form-select" id="inlineFormSelectPref">
+                      
+                      <option value="002a - built environment" >002a - built environment</option>
+                      <option value="006 - national metrology institute" >006 - national metrology institute</option>
+                      <option value="CSIR server" >CSIR server</option>
+                    </select>
+                    <label for="inlineFormSelectPref">Building name</label>
+                  </div>
+                </div>
+                <div class='col-md-4'>
+                  <div class="form-floating mb-3">
+                    <input type="text" id="start-datetime" class="form-control datetimepicker-input"
+                      data-target="#start-datetime" data-toggle="datetimepicker"
+                      data-date-format="yyyy-MM-DD HH:mm:ss" />
+                    <label for="start-datetime">Start date</label>
+                  </div>
+                </div>
+                <div class='col-md-4'>
+                  <div class="form-floating mb-3">
+                    <input type="text" id="end-datetime" class="form-control datetimepicker-input"
+                      data-target="#end-datetime" data-toggle="datetimepicker" data-date-format="yyyy-MM-DD HH:mm:ss" />
+                    <label for="end-datetime">End date</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="btn btn-primary sub-btn" id="submit-button" type="submit" style="width: 100%;">Submit</button>
+                </div>
+              </div>
+
+              <!--<div class="input-group">
+                  <span class="input-group-text" id="addon-wrapping">Building Name:</span>
+                  <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+                  <select class="form-select" id="inlineFormSelectPref">
+                    <option selected th:if="${allLocations.size() <= 0}" th:text="'No Building Found'"/>
+                    <option th:each="location : ${allLocations}" th:text="${location}" th:value="${location}"/>
+                  </select>
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-text" id="addon-wrapping">Start Date:</span>
+                  <label for="start-datetime"></label>
+                  <input class="form-control" id="start-datetime" name="date" type="text" value=""/>
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-text" id="addon-wrapping">End Date:</span>
+                  <label for="end-datetime"></label>
+                  <input class="form-control" id="end-datetime" name="date" type="text"/>
+                </div>-->
+
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <hr>
+    <br>
+    <div id="dashboardVisual" class="container-fluid">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1 id="summary"></h1>
+        </div>
+      </div>
+
+      <section class="mb-4">
+        <div class="row">
+
+          <div class="col-md-3">
+            <div class="bg-green-light card data-info-card">
+              <div class="card-body">
+                <div class="data-info-card-content">
+                  <div class="subtitle mb-2 text-muted">Status (<span class="text-muted mb-0"
+                      style="font-size:10px">last seen: </span><span class="text-muted mb-0" style="font-size:10px"
+                      id="lastSeen"></span>)</div>
+                  <h4 class="fw-normal text-success h2" id="status">...</h4>
+                </div>
+                <div class="text-end">
+                  <i class="bx bxs-circle text-success mt-3"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card data-info-card bg-blue-light">
+              <div class="card-body">
+                <div class="data-info-card-content">
+                  <div class="subtitle mb-2 text-muted">Consumption Today</div>
+                  <h4 class="fw-normal text-blue h2" id="todayConsumption">...</h4>
+                  <p class="text-muted mb-0"></p>
+                </div>
+                <div class="text-end">
+                  <i class="bx bxs-circle text-blue mt-3"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="bg-danger-light card data-info-card">
+              <div class="card-body">
+                <div class="data-info-card-content">
+                  <div class="subtitle mb-2 text-muted">Meter has Pressure Sensor?</div>
+                  <h4 class="fw-normal text-danger h2" id="hasPressureSensor">...</h4>
+                </div>
+                <div class="text-end">
+                  <i class="bx bxs-circle text-danger mt-3"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="bg-purple-light card data-info-card">
+              <div class="card-body">
+                <div class="data-info-card-content">
+                  <div class="subtitle mb-2 text-muted">No of people served by meter</div>
+                  <h4 class="fw-normal text-purple h2" id="noOfPeopleServing">...</h4>
+                  <p class="mb-0"></p>
+                </div>
+                <div class="text-end">
+                  <i class="bx bxs-circle text-purple mt-3"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card card-object">
+              <table id="example" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Location</th>
+                    <th>Start Reading</th>
+                    <th>Last/Max Reading</th>
+                    <th>Difference (Total Consumption)</th>
+                    <th>Time Of Last Reading</th>
+                  </tr>
+                </thead>
+                <tbody id="Tbody" class="Tbody">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card card-object graph-section">
+              <div id="main2"></div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="card card-object graph-section">
+              <div id="main3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Guidelines Descritpion-->
+    <div class="info-section" hidden>
+      <div id="DescriptionTitle" hidden>
+        <h5 style="text-align: center;"><strong>Description - Guidelines for rendering graphs</strong></h5>
+      </div>
+      <hr>
+      <div id="DescriptionBody" hidden>
+        <p>This page presents the meter readings data. The summary of the meter consumption since initial date of record,
+          is presented. The status of the meter, the monthly consumptions summary, and the instant meter reading values
+          are presented.</p>
+        <p>The database can be queries using the form found at the top of the page, using date and time to filter. The
+          following steps can be followed:</p>
+        <ul>
+          <li>Choose a location from the location drop-down</li>
+          <li>Select the Start Date and Time</li>
+          <li>Select the End Date and Time</li>
+        </ul>
+        <p>Upon an Error make sure to double-check if you have not selected start date as greater than end date.</p>
+        <hr>
+        <p>The graphs are interactive</p>
+      </div> 
+    </div>
+
+   <!-- Guidelines Descritpion-->
+    
+    <script type="text/javascript" src="/libraries/echarts/echarts.js"></script>
+  
+
+    <script src="/js/custom.js"></script>
+    <script src="/js/datetime-picker-configs.js"></script>
+    <script src="/js/dashboard.js"></script>
+
+    <script>
+      allLocations = ["002a - built environment","006 - national metrology institute","CSIR server"];
+      meterSummary = null
+    </script>
+
+    <script type='text/javascript'>
+
+    </script>
+  </main>
+
+  <!-- Ensure only one pop dialog will be opened at the time -->
+  <div id="popDialog" style="display: none;"></div>
+  
+  <div class="modal fade" id="feedbackDialog" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="feedbackTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="feedbackTitle" class="modal-title">Title</h5>
+          <button type="button" class="btn-close btn-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="feedbackMsg"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/side-menu.js"></script>
+  <script type="text/javascript" src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/notifications.js"></script>
+  
+</body>
+</html>

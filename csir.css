@@ -1,0 +1,76 @@
+
+*{
+    box-sizing: border-box;
+
+    
+    
+}
+.navbar-text{
+    display: inline !important;
+    color: #ffffff !important ;
+    text-align: justify;
+    text-indent: 80px;
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 1.25rem;
+    font-weight: 700 ;
+}
+.container-fluid{
+
+     background-color: #113859;
+     height: 75px;
+     z-index:4;
+
+}
+
+.btn-outline-light{
+
+    padding: 2px 5px !important;
+
+}
+
+.side-menu{
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: rgb(165, 162, 162);
+    width: 80px;
+    overflow-x: hidden;
+    z-index:1;
+    
+}
+.page-heading{
+
+    text-transform: uppercase;
+    letter-spacing:5px;
+    font-weight: 300;
+    font-size: 2rem !important;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-indent:80px;
+    padding: 20px
+    
+
+    
+
+}
+.bx-grid-alt{
+    z-index:600;
+    text-align: center;
+
+}
+
+/* submit button block */
+
+.btn-primar{
+
+    color: #ffffff;
+    background-color: #113859;
+    border-color: #113859;
+
+}

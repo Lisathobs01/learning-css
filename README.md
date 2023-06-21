@@ -1,6 +1,4 @@
-
-
-# Learning CSS 
+# Learning CSS & Bootstrap CSS Framework.
 
 > or also practicing Git
 
@@ -68,3 +66,49 @@
     - px (Pixels) ## mostly used in CSS
 
 - RELATIVE UNITS , relative units on the other hand are relative to something else, perhaps the size of the parent element's font, or the size of the viewport
+
+
+# BOOTSTRAP CSS FRAMEWORK.
+
+#### What is Bootstrap?
+- Most popular Front-End framework.
+- Used for building responsive , mobile first websites and web applications.
+- HTML/CSS/JavaScript.
+
+#### Why use Bootstrap?
+- Increase development speed
+- Assure responsiveness
+- Prevent repetition between projects
+- Add consistency
+- Ensure cross browser compatibility
+- Large community
+- Customizable
+
+
+#### Bootstrap components and helpers
+
+- Alerts                
+- Badges                
+- Breadcrumbs           
+- Buttons               
+- Cards                 
+- Carousel              
+- Collapse              
+- Dropdowns
+- List group
+- Modal
+- Navbars        
+- Panels
+- Paginations
+- Popovers
+- Progress bars
+- Scrollspy
+- Spinners
+- Toasts
+- Tooltips
+- Clearfix
+- Icons
+- Tables
+- Responsive Ut...
+- Gutters
+#### Components
