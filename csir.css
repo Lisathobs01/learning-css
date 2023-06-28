@@ -83,6 +83,117 @@
 
 
 
+
+
+/* four blocks after meter daa request form */
+
+.bx-info-circle{
+    color: #113859;
+}
+
+
+.bg-blue-light{
+
+    position: relative;
+    left:100px;
+    background-color:#AFECEF!important;
+    border:0
+}
+
+
+
+.bi-circle-fill{
+    font-size: 60px;
+    float: right;
+    color: #00B1BB !important;
+}
+.data-info-card{
+
+    border: 0!important;
+    box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+
+}
+
+
+
+.fw-normal{
+
+    color:#00B1BB!important ;
+}
+
+
+.bg-red-light{
+
+    position: relative;
+    left:100px;
+    background-color:#EF98A3!important;
+    border:0;
+}
+
+
+.data-info-card-1{
+
+    border: 0!important;
+    box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+
+}
+
+.bi-1{
+
+    color:#EB1933!important;
+    
+}
+
+.fw-normal-1{
+
+    color:#EB1933!important ;
+}
+
+.bg-yellow-dark{
+
+    position: relative;
+    left:100px;
+    background-color:#B18530!important;
+    border:0;
+}
+
+.data-info-card-2{
+
+    border: 0!important;
+    box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+}
+.bi-2{
+
+    color:#FFC24F!important;
+    
+}
+.fw-normal-2{
+
+    color:#FFC24F!important;
+}
+
+
 .bg-green-light{
-    background-color: #AFECEF;
+
+    position: relative;
+    left:100px;
+    background-color:#79E7BA!important;
+    border:0;
+}
+
+.data-info-card-2{
+
+    border: 0!important;
+    box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+}
+
+.bi-3{
+
+    color:#007143 !important;
+    
+}
+
+.fw-normal-3{
+
+    color:#007143!important;
 }
