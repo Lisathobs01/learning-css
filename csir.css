@@ -5,7 +5,20 @@
     
     
 }
-.navbar-text{
+.ul{
+    list-style-type: none!important;
+}
+.bx-cog{
+
+    color:#ffffff;
+}
+.bx-bell{
+
+    color: #ffffff;
+}
+
+
+/* .navbar-text{ 
     display: inline !important;
     color: #ffffff !important ;
     text-align: justify;
@@ -14,20 +27,53 @@
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 1.25rem;
-    font-weight: 700 ;
-}
-.container-fluid{
-
-     background-color: #113859;
-     height: 75px;
-     z-index:4;
-
-}
+     font-weight: 700 ;
 
 .btn-outline-light{
 
     padding: 2px 5px !important;
+}
+ */
 
+ 
+.btn-outline-success{
+
+color: #ffffff!important;
+border-color: #ffffff!important;
+}
+ 
+ .profile-name{
+
+    color:#ffffff !important;
+ }
+
+.d-sm-inline{
+
+color: #ffffff;
+padding: right!important;
+
+}
+
+.bx-menu-alt-left{
+
+color: #ffffff;
+font-size:35px;
+text-indent: 10px;
+}
+
+
+.pt-{
+    color: #113859!important;
+
+ }
+ .profile-name {
+    font-size: 12px!important;
+    color:rgb(165, 162, 162);
+    
+ }
+.py-2{
+
+    background-color: #113859!important;
 }
 
 .side-menu{
@@ -111,6 +157,7 @@
 
     border: 0!important;
     box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+    max-height: 120px;
 
 }
 
@@ -135,6 +182,7 @@
 
     border: 0!important;
     box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+    max-height: 120px;
 
 }
 
@@ -161,6 +209,7 @@
 
     border: 0!important;
     box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+    max-height: 120px;
 }
 .bi-2{
 
@@ -181,10 +230,11 @@
     border:0;
 }
 
-.data-info-card-2{
+.data-info-card-3{
 
     border: 0!important;
     box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+    max-height: 120px;
 }
 
 .bi-3{
@@ -196,4 +246,27 @@
 .fw-normal-3{
 
     color:#007143!important;
+}
+
+.card-object-1{
+
+    margin: 10px 0px!important;
+    border-radius: 10px;
+    
+}
+.shift-card{
+
+    left:100px;
+    border: 0!important;
+    box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+   
+}
+.graph-section{
+    left:100px!important;
+    background-color: #ffffff!important;
+    border: 0!important;
+    box-shadow:0 .5rem 1rem rgb(0,0,0,.15);
+   
+
+
 }

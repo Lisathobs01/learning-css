@@ -21,36 +21,109 @@
 
 </head>
 <!----------------------------------------------------------------------------------------------------------------------------------->
+<section>
+<header class="">
+  <nav class="navbar shadow  fixed-top  navbar-light   py-2">
+    
+    <div class="container-fluid">
+      <div class="home-content">
+        <i class="bx bx-menu-alt-left"></i>
+      </div>
+      <a class="navbar-brand fw-bold text-uppercase text-base me-auto" href="/">
+        <span class="d-none d-sm-inline ">Smart Water Management System</span>
+      </a>
 
-<body class="">
-    <nav class="navbar bg-body-tertiary pt-0">
-        <div class="container-fluid">
-            <div class="navbar-text">Smart water management system</div>
-          <button type="button" class="btn btn-outline-light">Logout</button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse bg-white">
 
-         
-          
-          
-          
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              
+                <li class="nav-item">
+                 
+                    
+                      <div class="row">
+                        <div class="col-3">
+                          
+                        </div>
+                        <div class="col-9">
+                          <div class="profile-name">operator@csir.co.za</div>
+                          <div class="profile-name">CSIR Operator</div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              
+                <li class="nav-item dropdown dropstart">
+                  <a id="NotificationsDropDown" role="button" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                    <i class="bx bx-bell" style="font-size: 20px; margin: 12px;"></i>
+                    <span id="notificationsCount" style="margin: 10px -15px; font-size: 10px;" class="position-absolute translate-middle badge bg-danger rounded-circle">0</span>
+                  </a>
+                  <div class="dropdown-menu" id="notificationsDropdown" aria-labelledby="NotificationsDropDown" style="margin-top: 45px; margin-right: -40px;">
+                    <div id="notificationList">
+                      <p class="noNotifications">No new notifications..</p>
+                    </div>
+                    <div id="viewList" style="text-align: center;"></div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown dropstart">
+                  <a id="settingsDropDown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bx bx-cog" style="font-size: 20px; margin: 12px;"></i>
+                  </a>
+                  <!--<ul class="dropdown-menu" aria-labelledby="settingsDropDown" style="margin-top: 45px; margin-right: -40px;">
+                    
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/userprofile/editOwnProfile">User profile</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    <li>
+                      <a class="dropdown-item" href="/loggedin/mapprovider">Map provider details</a>
+                    </li>
+                    
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                      <a class="dropdown-item" href="/logout">Logout</a>
+                    </li>
+                  </ul>-->
+                </li>
+                <li class="nav-item" style="margin: 8px 0 0 10px;">
+                  <a href="/logout" class="btn btn-outline-success">
+                    logout
+                  </a>
+                </li>
+              
+            </ul>
+    </div>
+    
 
-        </div>
-      </nav>
+
+
+      
+      
+
+</html>       
+</section>
+<main id ="main-section" class="home-section pt-5"></main> 
+
+<section>
+  <div class="page-header">
+    <h2 class="page-heading">Dashboard</h2>
+  </div>
+</section>
+
+<!----------------------------------------------------------------------------------------->
 
 <!--Side name--> 
       <div class="side-menu"> 
-<i class="bx bx-grid-alt"></i>
+        
+
 
         
 </div>
-<!-- DASHBOARD -->
-<section>
-    <div class="page-header">
-        <h2 class="page-heading">Dashboard</h2>
 
-
-    </div>
-
-</section>
 
 <!-- Meter data request form block -->
 <div class="container">
@@ -109,7 +182,7 @@
       <hr>
       <br>
       <!--Four blocks after a "hr" rule-->
-     <!--- <div id="dashboardVisual" class="container-fluid"> -->
+     <!--- <div id="dashboardVisual" class="container-fluid"> ------------------------------------------------------------>
         <div class="row">
           <div class ="col-md-12">
             <h1 id="summary"></h1>
@@ -188,13 +261,46 @@
                           </div>
                         </div>
                       </div>
-                    </div>     
+                    </div>  
+                  </div>
         </section>
-      </div>   
-              
-            
+        
+        <div class="col-md-12">
+          <h1 id="summary"></h1>
+        </div>      
+           <br> 
+           <br>
 
-     
+        <section>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-object shift-card">
+                <table id="example" class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th>Location</th>
+                      <th>Start Reading</th>
+                      <th>Last/Max Reading</th>
+                      <th>Difference (Total Consumption)</th>
+                      <th>Time Of Last Reading</th>
+                    </tr>
+                  </thead>
+                  <tbody id="Tbody" class="Tbody"><tr><td style="background: #008fc6 color: white; text-align: left">002a - built environment</td><td>10 litres</td><td>545 litres</td><td>535 litres</td><td>2023/06/30, 12:37:05</td><tr></tr></tr></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+<br>
+<section>       
+ <!---->  
+ <div class="col-md-4">
+  <div class="card graph-card card-object graph-section">
+    <div id="main2" style="user-select: none; position: relative;" _echarts_instance_="ec_1688121983982">
+      <div style="position: relative; width: 563px; height: 450px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas style="position: absolute; left: 0px; top: 0px; width: 563px; height: 450px; user-select: none; padding: 0px; margin: 0px; border-width: 0px;" data-zr-dom-id="zr_0" width="563" height="450"></canvas><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: 0px auto auto 0px !important;"></div><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: 0px 0px auto auto !important;"></div><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: auto auto 0px 0px !important;"></div><div style="position: absolute !important; visibility: hidden !important; padding: 0px !important; margin: 0px !important; border-width: 0px !important; user-select: none !important; width: 0px !important; height: 0px !important; inset: auto 0px 0px auto !important;"></div></div><div class="" style="position: absolute; display: block; border-style: solid; white-space: nowrap; z-index: 9999999; will-change: transform; box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px; transition: opacity 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgb(255, 255, 255); border-width: 1px; border-radius: 4px; color: rgb(102, 102, 102); font: 14px / 21px sans-serif; padding: 10px; top: 0px; left: 0px; transform: translate3d(285px, 331px, 0px); border-color: rgb(255, 255, 255); pointer-events: none;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="font-size:14px;color:#666;font-weight:400;line-height:1;">MAY 2023</div><div style="margin: 10px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><div style="margin: 0px 0 0;line-height:1;"><span style="display:inline-block;margin-right:4px;border-radius:10px;width:10px;height:10px;background-color:#5470c6;"></span><span style="font-size:14px;color:#666;font-weight:400;margin-left:2px">consumption</span><span style="float:right;margin-left:20px;font-size:14px;color:#666;font-weight:900">30</span><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div><div style="clear:both"></div></div></div></div>
+  </div>
+</div>
+   <!----> 
 
 </body>
 </html>
