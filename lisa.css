@@ -1,0 +1,118 @@
+*{
+padding: 0;
+margin:0;
+text-decoration: none !important;
+list-style: none;
+box-sizing: border-box;
+font-family: sans-serif;
+
+}
+
+nav{
+    background: #113859;
+    height: 80px;
+    width:100%;
+    position: fixed;
+    z-index: 4;
+}
+
+
+label.logo{
+    color:white;
+    font-size: 20px;
+    line-height: 80px;
+    padding:0 100px;
+    font-weight: 700;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height:80px;
+    margin:0 5px;
+
+}
+
+nav ul li a{
+    color: white;
+    font-size:17px;
+   /* padding: 7px 13px;*/
+    border-radius:3px ;
+}
+
+
+
+.btn{
+
+    font-weight: 400!important;
+    font-size: 1rem!important;
+}
+a.active,a:hover {
+background: #1b9bff;
+transition: .5s;
+
+}
+
+
+.bx-grid-alt{
+
+    padding-top: 10px;
+    
+}
+.bx{ 
+
+    margin-top: 20px!important;
+    padding-left:0;
+    margin-right: 16px!important;
+
+}
+.sidebar{
+padding-top: 80px;
+position: fixed;
+left: 0;
+width: 250px;
+height: 100%;
+background: rgb(165, 162, 165);
+}
+
+.sidebar header{
+
+    font-size: bold;
+    color:gray;
+    text-align: left;
+    text-indent: 50px;
+    line-height: 70px;
+    background: rgb(165, 162,165);
+    user-select: none;
+    font-weight: 700;
+
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 14px;
+    color: whitesmoke;
+    box-sizing: border-box;
+    border-top:1px solid rgb(128, 128, 128);
+    border-bottom: 1px solid rgb(128, 128, 128);
+    transition: .4s;
+}
+
+ul li:hover a{
+    padding-left: 50px;
+}
+
+
+
+
+
+
+.colors{color: #113859 #EB1933 #dfe1df}

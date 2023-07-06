@@ -3,7 +3,7 @@
 }
 
 ::marker {
-    color: #113859 !important;
+    color: #ffffff !important;
 }
 
 .ul {
@@ -11,41 +11,48 @@
 }
 
 .bx-cog {
-    color: #ffffff;
+    color: #629080;
+    font-size: 20px;
+    margin: 12px;
 }
 
 .bx-bell {
-    color: #ffffff;
+    color: #629080;
 }
 
 .bi-circle-fill {
     margin-top: -60px !important;
 }
 
+.text-center {
+    color: #fff !important;
+}
+
 .btn-outline-success {
-    color: #ffffff !important;
-    border-color: #ffffff !important;
+    color: #629080 !important;
+    border-color: #629080 !important;
     margin-bottom: 10px;
 }
 
-.profile-name {
-    font-size: 12px !important;
-    color: #ffffff !important;
-}
-
 .d-sm-inline {
-    color: #ffffff;
+    color: #4b4c4c !important;
     padding: right !important;
 }
 
 .bx-menu-alt-left {
-    color: #ffffff;
+    color: #4b4c4c;
     font-size: 35px;
     text-indent: 10px;
 }
 
+.profile-name {
+    font-size: 12px !important;
+    color: #629080 !important;
+    margin-bottom: 20px;
+}
+
 .py-2 {
-    background-color: #113859 !important;
+    background-color: #ffffff !important;
 }
 
 .side-menu {
@@ -69,38 +76,39 @@
     margin-bottom: 0.5rem;
     line-height: 1.2;
     text-indent: 80px;
-    padding: 20px;
+    padding: 20px
 }
 
 .bx-grid-alt {
     z-index: 600;
     text-align: center;
+
 }
 
 .btn-primary {
-    color: #ffffff;
-    background-color: #113859 !important;
-    border-color: #113859 !important;
+    color: #629080 !important;
+    background-color: #ffff !important;
+    border-color: #fff !important;
 }
 
 .card-object {
-    background-color: rgb(165, 162, 162) !important;
+    background-color: #629080 !important;
 }
 
 .bx-info-circle {
-    color: #113859;
+    color: #fff;
 }
 
 .bg-blue-light {
     position: relative;
-    background-color: #AFECEF !important;
+    background-color: #aaaaaa !important;
     border: 0;
 }
 
 .bi-circle-fill {
     font-size: 60px;
     float: right;
-    color: #00B1BB !important;
+    color: #4b4c4c !important;
 }
 
 .data-info-card {
@@ -110,12 +118,12 @@
 }
 
 .fw-normal {
-    color: #00B1BB !important;
+    color: #4b4c4c !important;
 }
 
 .bg-red-light {
     position: relative;
-    background-color: #EF98A3 !important;
+    background-color: #98d4c0 !important;
     border: 0;
 }
 
@@ -126,16 +134,16 @@
 }
 
 .bi-1 {
-    color: #EB1933 !important;
+    color: #629080 !important;
 }
 
 .fw-normal-1 {
-    color: #EB1933 !important;
+    color: #629080 !important;
 }
 
 .bg-yellow-dark {
     position: relative;
-    background-color: #B18530 !important;
+    background-color: #ffd998 !important;
     border: 0;
 }
 
@@ -146,16 +154,16 @@
 }
 
 .bi-2 {
-    color: #FFC24F !important;
+    color: #f9ab10 !important;
 }
 
 .fw-normal-2 {
-    color: #FFC24F !important;
+    color: #f9ab10 !important;
 }
 
 .bg-green-light {
     position: relative;
-    background-color: #79E7BA !important;
+    background-color: #cbbcbc !important;
     border: 0;
 }
 
@@ -166,11 +174,11 @@
 }
 
 .bi-3 {
-    color: #007143 !important;
+    color: #9aa39f !important;
 }
 
 .fw-normal-3 {
-    color: #007143 !important;
+    color: #9aa39f !important;
 }
 
 .card-object-1 {
@@ -181,10 +189,17 @@
 .shift-card {
     border: 0 !important;
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .15);
+
 }
 
 .graph-section {
     background-color: #ffffff !important;
     border: 0 !important;
     box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .15);
+}
+
+.profile-name {
+    white-space: pre-line;
+    font-size: 10px !important;
+    top: 40px !important;
 }
